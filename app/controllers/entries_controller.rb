@@ -3,7 +3,6 @@ class EntriesController < ApplicationController
     @entry = Entry.find_by({"id" => params["id"]})
     @place = Place.find_by({"id" => @entry["place_id"]})
   end
-end
 
 def new
   @place = Place.find_by({"id" => params["place_id"]})
@@ -18,3 +17,5 @@ def create
   @entry.save
   redirect_to "/places/#{@entry["place_id"]}"
   end
+
+end

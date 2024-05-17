@@ -13,5 +13,10 @@
     <label for="posted_on">Posted_on</label>
     <input type="date" name="posted_on" id="posted_on">
   </p>
+
+  <!-- transfer state from the previous action to the next -->
+    <input type="hidden" name="place_id" value="<%= @place["id"] %>">
+
   <button>Submit</button>
 </form>
+
